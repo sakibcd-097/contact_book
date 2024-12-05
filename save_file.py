@@ -23,6 +23,6 @@ def contacts_load(filename="contacts.csv"):
                 contacts_info[phone] = {"name": name, "email": email, "address": address}
         return "Contacts loaded successfully."
     except FileNotFoundError:
-        return "No saved contacts found. Starting fresh."
+        return "No saved contacts are found. Start Again."
     except Exception as e:
         return f"Error loading contacts: {str(e)}"
