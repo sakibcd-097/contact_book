@@ -1,5 +1,5 @@
 
-from contacts_info import add_contact, view_contacts, remove_contact
+from contacts_info import contact_add, contacts_view, contact_remove
 from save_file import contacts_save, contacts_load
 from validation_check import valid_name, valid_phone, valid_email
 
@@ -40,15 +40,15 @@ def main():
                 continue
 
             address = input("Enter the address: ")
-            result = add_contact(name, email, phone, address)
+            result = contact_add(name, email, phone, address)
             print(result)
 
         elif choice == '2':
-            print(view_contacts())
+            print(contacts_view())
 
         elif choice == '3':
             phone = input("Enter the phone number contact to remove: ")
-            result = remove_contact(phone)
+            result = contact_remove(phone)
             print(result)
 
         elif choice == '4':

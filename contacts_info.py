@@ -1,13 +1,13 @@
 
 contacts_info = {}
 
-def add_contact(name, email, phone, address):
+def contact_add(name, email, phone, address):
     if phone in contacts_info:
         return f"Warning! The phone number {phone} already exists."
     contacts_info[phone] = {"name": name, "email": email, "address": address}
     return f"Contact for {name} added successfully."
 
-def view_contacts():
+def contacts_view():
     if not contacts_info:
         return "No contacts are available."
     output = "Name\t\tEmail\t\tPhone\t\tAddress\n"
@@ -16,7 +16,7 @@ def view_contacts():
         output += f"{details['name']}\t{details['email']}\t{phone}\t{details['address']}\n"
     return output
 
-def remove_contact(phone):
+def contact_remove(phone):
     if phone in contacts_info:
         del contacts_info[phone]
         return f"Contact with phone number {phone} removed."
