@@ -9,7 +9,7 @@ def add_contact(name, email, phone, address):
 
 def view_contacts():
     if not contacts_info:
-        return "No contacts are available."
+        return "No contacts are available!."
     output = "Name\t\tEmail\t\tPhone\t\tAddress\n"
     output += "-" * 60 + "\n"
     for phone, details in contacts_info.items():
