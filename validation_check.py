@@ -1,8 +1,7 @@
-# utils.py
 
 def valid_phone(phone):
     if not phone.isdigit():
-        return False, "Phone must be  integer degit."
+        return False, "Phone must be numeric integer degit."
     return True, ""
 
 def valid_name(name):

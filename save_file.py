@@ -17,7 +17,7 @@ def contacts_load(filename="contacts.csv"):
     try:
         with open(filename, mode='r') as file:
             reader = csv.reader(file)
-            next(reader)  # Skip header row
+            next(reader)
             for row in reader:
                 name, email, phone, address = row
                 contacts_info[phone] = {"name": name, "email": email, "address": address}
