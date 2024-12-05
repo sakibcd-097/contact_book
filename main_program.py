@@ -21,25 +21,25 @@ def main():
         choice = input("Select an option: ")
 
         if choice == '1':
-            name = input("Enter name: ")
+            name = input("Enter the name: ")
             is_valid_name, name_msg = valid_name(name)
             if not is_valid_name:
                 print(name_msg)
                 continue
 
-            email = input("Enter email: ")
+            email = input("Enter the email: ")
             is_valid_email, email_msg = valid_email(email)
             if not is_valid_email:
                 print(email_msg)
                 continue
 
-            phone = input("Enter phone number: ")
+            phone = input("Enter the phone number: ")
             is_valid_phone, phone_msg = valid_phone(phone)
             if not is_valid_phone:
                 print(phone_msg)
                 continue
 
-            address = input("Enter address: ")
+            address = input("Enter the address: ")
             result = add_contact(name, email, phone, address)
             print(result)
 
@@ -47,16 +47,16 @@ def main():
             print(view_contacts())
 
         elif choice == '3':
-            phone = input("Enter phone number of the contact to remove: ")
+            phone = input("Enter the phone number contact to remove: ")
             result = remove_contact(phone)
             print(result)
 
         elif choice == '4':
             print(contacts_save())
-            print("Goodbye!")
+            print("Thank you!")
             break
         else:
-            print("Invalid option. Please try again.")
+            print("Invalid option. Try again. ")
 
 
 if __name__ == "__main__":
