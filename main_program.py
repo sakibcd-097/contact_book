@@ -18,7 +18,7 @@ def main():
 
     while True:
         menu()
-        choice = input("Select an option : ")
+        choice = input("Select an option: ")
 
         if choice == '1':
             name = input("Enter name: ")
